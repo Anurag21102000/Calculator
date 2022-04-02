@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Task2/style.css">
+    <title>Calculator</title>
+    <style>
+        
+body{
+    background-image: linear-gradient(150deg, rgb(254, 229, 229), rgb(104, 132, 255));
+}
+h1{
+    top: 0px;
+    text-align: center;
+    font-size: 4.5rem;
+    color: rgb(173, 66, 255);
+    filter: drop-shadow(30px 10px 4px #9292ff);
+}
+.container {
+    max-width: 400px;
+    top: -80px;
+    margin:auto auto;
+    box-shadow: 0px 0px 43px 17px rgb(187, 245, 255);
+}
+
+#Calculator{
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    padding: 16px 8px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn{
+    display: grid;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.btn > div {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.btn {
+    border: 0.5px solid #999;
+    line-height:90px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: white;
+}
+
+#equal {
+    background-color: rgb(85, 85, 255);
+    color: white;
+}
+#sp{
+    text-align: right;
+}
+.button:hover {
+    background-color: #0f0f3c;
+    font-weight: 800;
+    color: white;
+    transition: 0.2s ease-out;
+}
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="container">
+        <div id="Calculator"></div>
+        <div class="btn">
+            <div class="button">Clear All</div>
+            <div class="button">/</div>
+            <div class="button">*</div>
+            <div class="button">backspace</div>
+            <div class="button">7</div>
+            <div class="button">8</div>
+            <div class="button">9</div>
+            <div class="button">-</div>
+            <div class="button">4</div>
+            <div class="button">5</div>
+            <div class="button">6</div>
+            <div class="button">+</div>
+            <div class="button">1</div>
+            <div class="button">2</div>
+            <div class="button">3</div>
+            <div class="button">.</div>
+            <div class="button">(</div>
+            <div class="button">0</div>
+            <div class="button">)</div>
+            <div id="equal" class="button">=</div>
+    </div>
+</div><div id="sp">-By Anurag Singh</div>
+    
+    <script >
+
+        let btn = Array.from(document.getElementsByClassName('button'));
+        let sasa = document.getElementById('Calculator');
+        btn.map( button => {
+            button.addEventListener('click', (e) => {
+                switch(e.target.innerText){
+                    case 'Clear All':
+                        sasa.innerText = '';
+                        break;
+                    case '=':
+                        try{
+                            sasa.innerText = eval(sasa.innerText);
+                        } catch {
+                            sasa.innerText = "Error"
+                        }
+                        break;
+                    case 'backspace':
+                        if (sasa.innerText){
+                           sasa.innerText = sasa.innerText.slice(0, -1);
+                        }
+                        break;
+                    default:
+                        sasa.innerText += e.target.innerText;
+                }
+            });
+        });</script>
+</body>
+</html>
