@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+    <style>
+        body {
+            color: white;
+            padding: 0px;
+            margin: 0px;
+            background: url('img/abs-1850926.jpg');
+            /* background-repeat: no-repeat; */
+            /* height: 2500px; */
+            background-position-x: -424px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .left {
+            /* border: 2px solid red; */
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 12px;
+            background: url('');
+
+            text-align: center;
+        }
+
+        .left img {
+            width: 188px;
+        }
+
+        .mid {
+            /* border: 2px solid yellow; */
+            width: 35%;
+            margin: 12px auto;
+            display: block;
+        }
+
+        .right {
+            /* border: 2px solid green; */
+            position: absolute;
+            right: 34px;
+            top: 12px;
+            display: inline-block;
+        }
+
+        .cl {
+            display: inline-block;
+
+        }
+
+        .cl li {
+            display: inline-block;
+            font-size: 24px;
+        }
+
+        .cl li a {
+            padding: 23px 23px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .cl li a:hover,
+        .cl li a.act {
+            color: grey;
+            text-decoration: underline;
+        }
+
+        .btn {
+            padding: 3px 14px;
+            margin: 4px;
+            color: gray;
+            background-color: black;
+            border: 3px solid grey;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(212, 209, 209);
+        }
+
+        .container {
+            border: 2px solid white;
+            margin: 147px 59px;
+            padding: 66px 80px;
+            font-size: 23px;
+            width: 33%;
+        }
+
+        /* .head {
+            text-align: center;
+        } */
+
+        .form-inout input {
+            width: 500px;
+            text-align: center;
+            display: block;
+            margin: 10px auto;
+            padding: 9px;
+            font-size: 17px;
+            border-radius: 10px;
+            /* border: 2px solid yellowgreen; */
+
+        }
+        .container button{
+            display: block;
+            margin: 0px auto;
+            width: 104%;
+        }
+    </style>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/young-fitness-man-studio_7502-5008.jpg">
+            <div>THE GYM</div>
+
+        </div>
+        <div class="mid">
+            <ul class="cl">
+                <li><a href="#" class="act">home</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">location</a></li>
+                <li><a href="#">events</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call us</button>
+            <button class="btn">Mail us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h2 class="head">Best gym in Patna opening soon...</h2>
+        <form action="nobackend.php" class="cp">
+            <div class="form-inout">
+                <input type="text" placeholder="enter your name">
+            </div>
+            <div class="form-inout">
+                <input type="text" placeholder="enter your age">
+            </div>
+            <div class="form-inout">
+                <input type="text" placeholder="enter your E-mail">
+            </div>
+            <div class="form-inout">
+                <input type="text" placeholder="enter your phone number">
+            </div>
+            <div class="form-inout">
+                <input type="text" placeholder="enter your address">
+            </div>
+            <div class="form-inout">
+                <input type="text" placeholder="enter your weight">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
